@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Receiver {
 
     @JmsListener(destination = "mailbox", containerFactory = "myFactory")
-    public void receiveMessage(Email email) {
+    public void receiveMessage(String email) {
         System.out.println("Received <" + email + ">");
     }
 }
